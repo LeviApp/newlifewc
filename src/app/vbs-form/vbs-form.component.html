@@ -1,0 +1,38 @@
+
+<img src="../../assets/VBS.jpg" alt="">
+
+<form [formGroup]='vbsForm' name="vbs" id='vbs-form' method="post" (ngSubmit)="sendForm()">
+    <input type="hidden" name="form-name" value="contact" />
+    <h2>REGISTER!</h2>
+    <div>
+        <h3>Name</h3>
+        <input type="text" class='contactInput' name="name" formControlName="name" placeholder="Name" #name>
+        <span class='invalidText' *ngIf="nameGet.touched && nameGet.invalid"> Name field cannot be empty.</span>
+    </div>
+    <div>
+        <h3>Email</h3>
+        <input type="text" class='contactInput' name="email" formControlName="email" placeholder="Email" #email>
+
+        <span class='invalidText' *ngIf="emailGet.touched && emailGet.invalid"> Email is invalid.</span>
+
+    </div>
+    <div>
+        <h3>Phone #</h3>
+        <input type="text" class='contactInput' name="phone" placeholder="Phone #" formControlName="phone" #phone>
+        <span class='invalidText' *ngIf="phoneGet.touched && phoneGet.invalid">Phone # field cannot be empty.</span>
+    </div>
+    <div>
+        <h3>Number of Children</h3>
+        <input type="number" class='contactInput' name="subject" formControlName="children" placeholder="Number of Children" min="1" #subject>
+        <span class='invalidText' *ngIf="childrenGet.touched && childrenGet.invalid">Phone # field cannot be empty.</span>
+    </div>
+    <div class='textarea'>
+        <h3>Important Things to Know About Your Children</h3>
+        <textarea name="" id="" cols="" rows="10" name="message" formControlName="important" placeholder="Important Things" #message></textarea>
+        <span class='invalidText' *ngIf="importantGet.touched && importantGet.invalid">Important field cannot be empty.</span>
+
+    </div>
+    <div class="button">
+        <button [disabled]="!vbsForm.valid">Submit</button>
+    </div>
+</form>

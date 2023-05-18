@@ -1,0 +1,51 @@
+:host
+    display: flex
+    width: 100%
+    justify-content: center
+    align-items: center
+    margin-top: 50px
+
+img
+    width: 30%
+    margin: 20px
+#vbs-form
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    width: 50%
+    h2
+        color: red
+        font-size: 2rem
+
+    div
+        width: 75%
+        display: flex
+        flex-direction: column
+        color: red
+        h3
+            font-size: 1.25rem
+            margin-bottom: 10px
+        input
+            height: 40px
+            font-size: 1.25rem
+            background: wheat
+            padding-left: 10px
+        textarea
+            font-size: 1.25rem
+            background: wheat
+            padding-left: 10px
+        span
+            margin-top: 5px
+        button
+            margin: 20px 0
+            font-size: 1.25rem
+            background: aqua
+            padding: 5px
+            &:disabled
+                opacity: 0.25
+            &:enabled
+                &:hover
+                    opacity: 0.75
+                    cursor: pointer
+
